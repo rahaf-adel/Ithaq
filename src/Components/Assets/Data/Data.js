@@ -15,14 +15,17 @@ export const SidebarData = [
     {
         icon: UilEstate,
         heading: "Dashboard",
+        href: "/Dashboard"
     },
     {
         icon: UilUserPlus,
         heading: "Employee",
+        href: "/Employees",
     },
     {
         icon: UilFocusAdd,
         heading: "New Job",
+        href: "/JobOffers",
     },
     {
         icon: UilHeartAlt,

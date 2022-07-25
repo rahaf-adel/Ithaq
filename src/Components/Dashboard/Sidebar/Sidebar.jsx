@@ -6,7 +6,7 @@ import {UilSignOutAlt} from '@iconscout/react-unicons';
 import { UilBars } from "@iconscout/react-unicons";
 import { motion } from "framer-motion";
 import './sidebar.css';
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
     const [selected, setSelected] = useState(0);
@@ -56,9 +56,12 @@ const Sidebar = () => {
                     >
                         
                         <item.icon/>
+                       
+                        <a href={item.href}>
                         <span>
                             {item.heading}
                         </span>
+                        </a>
                     </div>
                 )
             })}
