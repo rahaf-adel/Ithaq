@@ -56,7 +56,6 @@ const Sidebar = () => {
                     >
                         
                         <item.icon/>
-                       
                         <a href={item.href}>
                         <span>
                             {item.heading}
@@ -66,7 +65,7 @@ const Sidebar = () => {
                 )
             })}
             <div className='menu-item'>
-              <Button onClick={logout} ><UilSignOutAlt /></Button>  
+              <Button variant="outline-danger" onClick={logout} ><UilSignOutAlt /></Button>  
             </div>
         </div>
     </motion.div>

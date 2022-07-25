@@ -14,26 +14,28 @@ import logo from '../Images/logo.jpeg';
 export const SidebarData = [
     {
         icon: UilEstate,
-        heading: "Dashboard",
-        href: "/Dashboard"
+        heading: "Home",
+        href: "/"
     },
     {
         icon: UilUserPlus,
         heading: "Employee",
-        href: "/Employees",
+        href: "/AddEmployee"
     },
     {
         icon: UilFocusAdd,
         heading: "New Job",
-        href: "/JobOffers",
+        href: '/AddJopOffer'
     },
     {
         icon: UilHeartAlt,
         heading: "Favorite",
+        href: "#"
     },
     {
         icon: UilUserSquare,
         heading: "Profile",
+        href: "#"
     },
 ];
 

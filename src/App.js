@@ -20,8 +20,8 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Login from "./Components/Login";
 import Rigester from "./Components/Register";
-// import AddEmployee from './Components/AddEmployee'
-// import AddJopOffer from './Components/AddJobOffer'
+import AddEmployee from './Components/AddEmployee'
+import AddJopOffer from './Components/AddJobOffer'
 function App() {
   return (
     <>
@@ -34,8 +34,8 @@ function App() {
             <Route path="/Employees" element={<Employee />}></Route>
             <Route path="/Login" element={<Login />}></Route>
             <Route path="/Rigester" element={<Rigester />}></Route>
-            {/* <Route path='/AddEmployee' element={<AddEmployee/>}></Route>
-          <Route path='/AddJopOffer' element={<AddJopOffer/>}></Route> */}
+            <Route path='/AddEmployee' element={<AddEmployee/>}></Route>
+            <Route path='/AddJopOffer' element={<AddJopOffer/>}></Route>
           </Routes>
           {/* <Footer /> */}
         </Router>

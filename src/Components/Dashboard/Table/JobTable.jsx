@@ -9,6 +9,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { UilEditAlt } from '@iconscout/react-unicons'
 import { UilTimes } from '@iconscout/react-unicons'
+import { Button } from 'react-bootstrap';
 
 function createData(name, position, date, status) {
     return { name, position, date, status };
@@ -71,8 +72,8 @@ function createData(name, position, date, status) {
                     <TableCell align="left">
                       <span className="status" style={makeStyle(row.status)}>{row.status}</span>
                     </TableCell>
-                    <TableCell align="left" className="Details"><UilEditAlt/></TableCell>
-                    <TableCell align="left" className="Details"><UilTimes/></TableCell>
+                    <TableCell align="left" className="Details"><Button variant="outline-warning"><UilEditAlt/></Button></TableCell>
+                    <TableCell align="left" className="Details"><Button variant="outline-danger"><UilTimes/></Button></TableCell>
                   </TableRow>
                 ))}
               </TableBody>

@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState,useEffect} from "react";
 import employee1 from "./Assets/Images/employee1.png";
 import employee2 from "./Assets/Images/employee2.png";
 import employee3 from "./Assets/Images/employee3.png";
@@ -9,53 +9,66 @@ import { CardGroup } from "react-bootstrap";
 import Cards from "./EmployeeCards";
 import Header from './Header'
 import Footer from './Footer'
+import axios from "axios";
 
 function Employee() {
-  const employees = [
-    {
-      img: employee1,
-      name: "Fahad Osama",
-      job: "Front End Developer",
-      company: "SDAIA",
-      linkedin: "https://www.linkedin.com/in/rahaf-alrowithi-87203116a/",
-    },
-    {
-      img: employee2,
-      name: "Farah Ahmad",
-      job: "Back End Developer",
-      company: "STC",
-      linkedin: "https://www.linkedin.com/in/rahaf-alrowithi-87203116a/",
-    },
-    {
-      img: employee3,
-      name: "Ibrahim Khalid",
-      job: "Full Stack Developer",
-      company: "SAUDI FEDERATION FOR CYBERSECURITY, PROGRAMMING & DRONES",
-      linkedin: "https://www.linkedin.com/in/rahaf-alrowithi-87203116a/",
-    },
-    {
-      img: employee4,
-      name: "Raghad Adel",
-      job: "Software Engineer",
-      company: "Misk",
-      linkedin: "https://www.linkedin.com/in/rahaf-alrowithi-87203116a/",
-    },
-    {
-      img: employee5,
-      name: "Fatimah Ahmad",
-      job: "Data Analyst",
-      company: "MINISTRY OF COMMUNICATIONS AND INFORMATION TECHNOLOGY",
-      linkedin: "https://www.linkedin.com/in/rahaf-alrowithi-87203116a/",
-    },
-    {
-      img: employee6,
-      name: "Khalid Ahmad",
-      job: "Software Engineer",
-      company: "MINISTRY OF COMMUNICATIONS AND INFORMATION TECHNOLOGY",
-      linkedin: "https://www.linkedin.com/in/rahaf-alrowithi-87203116a/",
-    },
-  ];
-  const employeeList = employees.map((value) => <Cards employees={value} />);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://62d3e391cd960e45d44f818f.mockapi.io/Ithaq")
+      .then((res) => {
+        console.log(res.data);
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  // const employees = [
+  //   {
+  //     img: employee1,
+  //     name: "Fahad Osama",
+  //     job: "Front End Developer",
+  //     company: "SDAIA",
+  //     linkedin: "https://www.linkedin.com/in/rahaf-alrowithi-87203116a/",
+  //   },
+  //   {
+  //     img: employee2,
+  //     name: "Farah Ahmad",
+  //     job: "Back End Developer",
+  //     company: "STC",
+  //     linkedin: "https://www.linkedin.com/in/rahaf-alrowithi-87203116a/",
+  //   },
+  //   {
+  //     img: employee3,
+  //     name: "Ibrahim Khalid",
+  //     job: "Full Stack Developer",
+  //     company: "SAUDI FEDERATION FOR CYBERSECURITY, PROGRAMMING & DRONES",
+  //     linkedin: "https://www.linkedin.com/in/rahaf-alrowithi-87203116a/",
+  //   },
+  //   {
+  //     img: employee4,
+  //     name: "Raghad Adel",
+  //     job: "Software Engineer",
+  //     company: "Misk",
+  //     linkedin: "https://www.linkedin.com/in/rahaf-alrowithi-87203116a/",
+  //   },
+  //   {
+  //     img: employee5,
+  //     name: "Fatimah Ahmad",
+  //     job: "Data Analyst",
+  //     company: "MINISTRY OF COMMUNICATIONS AND INFORMATION TECHNOLOGY",
+  //     linkedin: "https://www.linkedin.com/in/rahaf-alrowithi-87203116a/",
+  //   },
+  //   {
+  //     img: employee6,
+  //     name: "Khalid Ahmad",
+  //     job: "Software Engineer",
+  //     company: "MINISTRY OF COMMUNICATIONS AND INFORMATION TECHNOLOGY",
+  //     linkedin: "https://www.linkedin.com/in/rahaf-alrowithi-87203116a/",
+  //   },
+  // ];
+  const employeeList = data.map((value) => <Cards employees={value} />);
   return (
     <>
     <Header/>
