@@ -56,9 +56,11 @@ const Sidebar = () => {
                     >
                         
                         <item.icon/>
+                        <a href={item.href}>
                         <span>
                             {item.heading}
                         </span>
+                        </a>
                     </div>
                 )
             })}
