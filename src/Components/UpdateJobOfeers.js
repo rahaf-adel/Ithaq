@@ -1,26 +1,17 @@
-import React,{useState} from 'react'
+import React from 'react'
 import {
     Flex,
     Box,
     FormControl,
     FormLabel,
     Input,
-    Checkbox,
     Stack,
-    Link,
     Button,
     Heading,
     useColorModeValue,
   } from '@chakra-ui/react';
-import { useToast } from '@chakra-ui/react'
 import { NavLink } from 'react-router-dom';
 export default function AddJopOffer() {
-  const toast = useToast()
-  const [img, setImg] = useState("")
-  const [name, setName] = useState("")
-  const [company, setCompany] = useState("")
-  const [job, setJob] = useState("")
-  const [linkedin, setlinkedIn] = useState("")
   return (
     <Flex
       minH={'100vh'}
@@ -85,9 +76,9 @@ export default function AddJopOffer() {
                     color:"white"
                   }}
                   as={NavLink}
-                  to="#"
+                  to="/Dashboard"
                 >
-                 Add Job
+                 Update Job
                 </Button>
               </Stack>
             </Stack>

@@ -16,20 +16,19 @@ import {
   Link as RouteLink,
 } from "react-router-dom";
 import Home from "./Components/Home";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 import Login from "./Components/Login";
 import Rigester from "./Components/Register";
 import AddEmployee from './Components/AddEmployee'
 import AddJopOffer from './Components/AddJobOffer'
 import Partenrs from './Components/Partenrs'
 import CountactUs from "./Components/ContactUs";
+import UpdateEmployeeInfo from './Components/UpdateEmployeeInfo'
+import UpdateJobOffer from './Components/UpdateJobOfeers'
 function App() {
   return (
     <>
       <ChakraProvider theme={theme}>
         <Router>
-          {/* <Header /> */}
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/JobOffers" element={<JobOffers />}></Route>
@@ -40,8 +39,9 @@ function App() {
             <Route path='/AddJopOffer' element={<AddJopOffer/>}></Route>
             <Route path='/Partenrs' element={<Partenrs/>}></Route>
             <Route path='/CountactUs' element={<CountactUs/>}></Route>
+            <Route path='/UpdateEmployeeInfo' element={<UpdateEmployeeInfo/>}></Route>
+            <Route path='/UpdateJobOffer' element={<UpdateJobOffer/>}></Route>
           </Routes>
-          {/* <Footer /> */}
         </Router>
       </ChakraProvider>
 
