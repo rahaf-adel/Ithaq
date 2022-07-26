@@ -11,11 +11,11 @@ export default function HomeStatisticInfo() {
       number: 97,
     },
     {
-      title: " Companies",
+      title: " Employees",
       number: 97,
     },
     {
-      title: " Companies",
+      title: " Job Offers",
       number: 80,
     },
   ];

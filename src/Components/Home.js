@@ -2,17 +2,13 @@ import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import HomeSection4 from "./HomeSection4";
-import yellowBackgroun from "./Assets/Images/aa.jpeg";
 import {
   Stack,
   Flex,
   Text,
-  VStack,
   useBreakpointValue,
   Button,
   Box,
-  Center,
-  color,
   Heading,
   Container,
   Icon,
@@ -33,86 +29,95 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <Flex
-        w={"full"}
-        h={"100vh"}
-        // backgroundSize={"cover"}
-        // backgroundPosition={"center center"}
-      >
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+      <Flex mt={-10} w={"full"} h={"100vh"}>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
 
-      <Container maxW={"3xl"}>
-        <Stack
-          as={Box}
-          textAlign={"center"}
-          spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}
-        >
-          <Heading
-            fontWeight={600}
-            fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-            lineHeight={"110%"}
-          >
-            Be a partner of<br />
-            <Text as={"span"} color={"#1B668E"}>
-             your competitor
-            </Text>
-          </Heading>
-          <Text color={"gray.500"}>
-            Monetize your content by charging your most loyal readers and reward
-            them loyalty points. Give back to your loyal readers by granting
-            them access to your pre-releases and sneak-peaks.
-          </Text>
+        <Container maxW={"3xl"}>
           <Stack
-            direction={"column"}
-            spacing={3}
-            align={"center"}
-            alignSelf={"center"}
-            position={"relative"}
+            as={Box}
+            textAlign={"center"}
+            spacing={{ base: 8, md: 14 }}
+            py={{ base: 20, md: 36 }}
           >
-            <a href="#Rigester">
-              <Button
-                colorScheme={""}
-                bg={"#1B668E"}
-                rounded={"full"}
-                px={6}
-                _hover={{
-                  bg: "#1B668E",
-                }}
-              >
-                Get Started
-              </Button>
-            </a>
-            <Box>
-              <Icon
-                as={Arrow}
-                color={useColorModeValue("gray.800", "gray.300")}
-                w={71}
-                position={"absolute"}
-                right={-71}
-                top={"10px"}
-              />
-              <Text
-                fontSize={"lg"}
-                fontFamily={"Caveat"}
-                position={"absolute"}
-                right={"-125px"}
-                top={"-15px"}
-                transform={"rotate(10deg)"}
-              >
-                Starting
+            <Heading
+              fontWeight={600}
+              fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+              lineHeight={"110%"}
+            >
+              Be a <span style={{ color: "#1B668E" }}>partner</span>
+              <br />
+              <Text as={"span"}>
+                of your <span style={{ color: "#1B668E" }}> competitor </span>
               </Text>
-            </Box>
+            </Heading>
+            <Text color={"gray.500"}>
+              <b>
+                Monetize your content by charging your most loyal readers and
+                reward them loyalty points. Give back to your loyal readers by
+                granting them access to your pre-releases and sneak-peaks.
+              </b>
+            </Text>
+            <Stack
+              direction={"column"}
+              spacing={3}
+              align={"center"}
+              alignSelf={"center"}
+              position={"relative"}
+            >
+              <a href="#Rigester">
+                <Button
+                  colorScheme={""}
+                  bg={"#1B668E"}
+                  rounded={"full"}
+                  px={6}
+                  _hover={{
+                    bg: "#1B668E",
+                  }}
+                >
+                  Get Started
+                </Button>
+              </a>
+              <Box>
+                <Icon
+                  as={Arrow}
+                  color={useColorModeValue("gray.800", "gray.300")}
+                  w={71}
+                  position={"absolute"}
+                  right={-71}
+                  top={"15px"}
+                />
+                <Text 
+                  fontSize={"xl"}
+                  fontFamily={"Caveat"}
+                  position={"absolute"}
+                  right={"-170px"}
+                  top={"-45px"}
+                  transform={"rotate(18deg)"}
+                  _after={{
+                    content: "''",
+                    width: "70%",
+                    height: useBreakpointValue({ base: "20%", md: "30%" }),
+                    position: "absolute",
+                    bottom: 9,
+                    left: 6,
+                    bg: "#FFD24C",
+                    zIndex: -1,
+                  }}
+                >
+                  <Box ><Wave  color="#1277b0" text="Develop" effect="stretch" effectChange={1.5} /></Box>
+                  <Wave  fill="#1277b0" text="your Company" effect="stretch" effectChange={1.5} />
+                </Text>
+              </Box>
+            </Stack>
           </Stack>
-        </Stack>
-      </Container>
+        </Container>
       </Flex>
-      <Box mt={10}>
+      <Box mt={5}>
         <svg
           position="absolute"
           xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +146,6 @@ export default function Home() {
             bottom: 4,
             left: 36,
             bg: "#FFD24C",
-            //   bg: "#92B4EC",
             zIndex: -1,
           }}
         >
@@ -171,8 +175,8 @@ export default function Home() {
         <Flex justifyContent="space-between">
           <Text
             mt={10}
-           ml={10}
-           mr={10}
+            ml={10}
+            mr={10}
             fontSize={"2xl"}
             fontWeight={700}
             position={"relative"}

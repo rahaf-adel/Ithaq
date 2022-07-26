@@ -13,8 +13,8 @@ function Navbars() {
   ];
   return (
     <>
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="/">
+      <Navbar bg="light" expand="lg" >
+        <Navbar.Brand href="/" m={8}>
           <img
             src={logo}
             width="60"
@@ -39,11 +39,11 @@ function Navbars() {
                 ))}
           </Nav>
           {localStorage.getItem("isLogin") ? (
-            <Button as={NavLink} to="/Dashboard" variant="secondary">
+            <Button as={NavLink} to="/Dashboard" variant="warning">
               Dashboard
             </Button>
           ) : (
-            <Button as={NavLink} to={"/login"} variant="warning">
+            <Button as={NavLink} to={"/login"} variant="warning" ml="20px">
               {" "}
               Login
             </Button>
