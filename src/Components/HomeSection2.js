@@ -11,11 +11,11 @@ export default function HomeStatisticInfo() {
       number: 97,
     },
     {
-      title: " Companies",
+      title: " Employees",
       number: 97,
     },
     {
-      title: " Companies",
+      title: " Job Offers",
       number: 80,
     },
   ];
@@ -30,27 +30,17 @@ export default function HomeStatisticInfo() {
   return (
     <div>
       <SimpleGrid
+      bg={'white'}
         minChildWidth="200px"
         mr={16}
         ml={16}
-        mb={20}
+        mt={-60}
         rounded={15}
         boxShadow={"base"}
         data-aos="fade-up"
       >
         {StatisticList}
       </SimpleGrid>
-      {/* <Box zIndex="1" width="50%" position="absolute" height="40%">
-            <Box
-              bgGradient={useColorModeValue(
-                'radial(yellow.300 1px, transparent 1px)',
-                'radial(yellow.300 1px, transparent 1px)'
-              )}
-              backgroundSize="13px 20px"
-              opacity="0.7"
-              height="70%"
-            />
-          </Box>  */}
     </div>
   );
 }

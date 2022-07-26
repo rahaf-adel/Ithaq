@@ -79,7 +79,7 @@ export default function SmallCentered() {
           <p className="line"> | </p>
           <Link href={"#"}>  Terms of use </Link>
           <p className="line"> | </p>
-          <Link href={"#"}> Contact us</Link>
+          <Link href={"/CountactUs"}> Contact us</Link>
         </Stack>
       </Container>
 

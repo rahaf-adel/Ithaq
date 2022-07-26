@@ -22,6 +22,8 @@ import Login from "./Components/Login";
 import Rigester from "./Components/Register";
 import AddEmployee from './Components/AddEmployee'
 import AddJopOffer from './Components/AddJobOffer'
+import Partenrs from './Components/Partenrs'
+import CountactUs from "./Components/ContactUs";
 function App() {
   return (
     <>
@@ -36,6 +38,8 @@ function App() {
             <Route path="/Rigester" element={<Rigester />}></Route>
             <Route path='/AddEmployee' element={<AddEmployee/>}></Route>
             <Route path='/AddJopOffer' element={<AddJopOffer/>}></Route>
+            <Route path='/Partenrs' element={<Partenrs/>}></Route>
+            <Route path='/CountactUs' element={<CountactUs/>}></Route>
           </Routes>
           {/* <Footer /> */}
         </Router>

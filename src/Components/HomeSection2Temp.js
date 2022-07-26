@@ -21,11 +21,11 @@ export default function HomeStatisticTemp(props) {
           <Stack direction={"row"} align={"center"} justify={"center"}>
             <Text
               className="counter-value"
-              color={"#FFD24C"}
               fontSize={"5xl"}
               fontWeight={500}
+              color={"#FFD24C"}
             >
-              <CountUp duration={2.75} end={props.state.number} />
+              <CountUp  duration={2.75} end={props.state.number} />
             </Text>
             <Text color={"#FFD24C"} fontWeight={500} fontSize={"5xl"}>
               +
