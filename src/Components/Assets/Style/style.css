@@ -1,6 +1,9 @@
 /* h1{
     color:gold;
 } */
+.navbar-nav .nav-link.active, .navbar-nav .show > .nav-link{
+    background:none;
+}
 @media screen and (max-width: 768px) {
     .css-gg4vpm{
         margin-top: 250px;
