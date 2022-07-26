@@ -117,7 +117,7 @@ export default function Home() {
           </Stack>
         </Container>
       </Flex>
-      <Box mt={5}>
+      <Box className="svg" mt={5}>
         <svg
           position="absolute"
           xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +132,7 @@ export default function Home() {
       </Box>
       <HomeStatisticInfo />
 
-      <Flex id="Rigester" m={10} justifyContent="center" data-aos="fade-up">
+      <Flex className="partners" id="Rigester" m={10} justifyContent="center" data-aos="fade-up">
         <Text
           mt={10}
           fontSize={"4xl"}
@@ -155,14 +155,14 @@ export default function Home() {
 
       <HomeSection4 />
 
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <svg className="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#E1EAF5"
           fill-opacity="1"
           d="M0,288L1440,288L1440,0L0,0Z"
         ></path>
       </svg>
-      <Box mt={-10}>
+      <Box className="svg" mt={-10}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#E1EAF5"

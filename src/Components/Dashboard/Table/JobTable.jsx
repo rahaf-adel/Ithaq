@@ -90,7 +90,7 @@ function createData(name, position, date, status) {
 
     return (
         <div className="table" style={{marginTop:"30px"}}>
-        <h3 style={{marginBottom:"20px",fontSize: "25px"}}>My Employees</h3>
+        <h3 style={{marginBottom:"20px",fontSize: "25px"}}>My Job Offers</h3>
           <TableContainer
             component={Paper}
             style={{ boxShadow: "0px 13px 20px 0px #80808029" ,borderRadius: "0.7rem"}}
@@ -98,7 +98,7 @@ function createData(name, position, date, status) {
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell>Name</TableCell>
+                  {/* <TableCell>Name</TableCell> */}
                   <TableCell align="left">Position</TableCell>
                   <TableCell align="left">Date</TableCell>
                   <TableCell align="left">Status</TableCell>
@@ -111,9 +111,9 @@ function createData(name, position, date, status) {
                     // key={row.name}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
-                    <TableCell component="th" scope="row">
+                    {/* <TableCell component="th" scope="row">
                       {row.name}
-                    </TableCell>
+                    </TableCell> */}
                     <TableCell align="left">{row.job}</TableCell>
                     <TableCell align="left">{row.date}</TableCell>
                     <TableCell align="left">

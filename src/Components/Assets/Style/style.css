@@ -1,3 +1,20 @@
 /* h1{
     color:gold;
 } */
+@media screen and (max-width: 768px) {
+    .css-gg4vpm{
+        margin-top: 250px;
+    }
+    .svg{
+        display: none;
+    }
+    .css-1u9baau.aos-init.aos-animate{
+        margin-top: -150px;
+    }
+    .navbar-collapse{
+        margin-left: 20px;
+    }
+    .navbar-toggler{
+        margin-right: 20px;
+    }
+}
