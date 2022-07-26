@@ -82,7 +82,7 @@ export default function UpdateEmployee() {
     >
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
-          <Heading fontSize={'4xl'}>Add Employee</Heading>
+          <Heading fontSize={'4xl'}>Update Employee</Heading>
         </Stack>
           <Box
             rounded={'lg'}

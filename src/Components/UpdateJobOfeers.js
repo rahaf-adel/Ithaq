@@ -21,7 +21,7 @@ export default function AddJopOffer() {
     >
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
-          <Heading fontSize={'4xl'}>Job Offer</Heading>
+          <Heading fontSize={'4xl'}>Update Job Offer</Heading>
         </Stack>
           <Box
             rounded={'lg'}

@@ -5,6 +5,7 @@ import {RequestData} from '../../Assets/Data/Data';
 const Requests = () => {
   return (
     <div className="requests">
+      <h3 style={{fontSize: "25px"}}>Requests</h3>
       {RequestData.map((request) => {
         return (
           <div className="request">

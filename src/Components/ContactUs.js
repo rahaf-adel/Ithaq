@@ -201,6 +201,7 @@ export default function CountactUs() {
                         toast({
                           title: 'sent succesfully',
                           status: 'success',
+                          position: "top",
                           duration: 7000,
                           isClosable: true,
                         })
