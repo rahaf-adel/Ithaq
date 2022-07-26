@@ -4,7 +4,7 @@ import logo from "./Assets/Images/IthaqLogo.png";
 import { NavLink } from "react-router-dom";
 function Navbars() {
   const nav = [
-    { label: "Home", href: "/Home" },
+    { label: "Home", href: "/" },
     { label: "Contact Us", href: "/CountactUs" },
   ];
   const navLogin = [

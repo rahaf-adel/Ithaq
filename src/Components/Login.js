@@ -24,6 +24,7 @@ import { Navigate   } from "react-router-dom";
 import { useState } from 'react';
 // import axios from 'axios';
 import { NavLink } from 'react-router-dom';
+
 export default function SimpleCard() {
   const [userName, setUserName] = useState("")
   const [password, setPassword] = useState("")
@@ -45,7 +46,6 @@ export default function SimpleCard() {
       })
       .then((respons) => {
         console.log(respons.data);
-        alert(respons.data.msg);
         if (
           respons.data.msg == "Wellcome to Atim system >> Your token is ready"
         ) {
