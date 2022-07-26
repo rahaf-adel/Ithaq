@@ -33,9 +33,9 @@ export default function AddJopOffer() {
     e.preventDefault();
     console.log("Submitted from ------>");
     axios
-      .post("https://62d3e391cd960e45d44f818f.mockapi.io/Ithaq", {
-        position: position,
-        Description: Description,
+      .post("https://62d3e391cd960e45d44f818f.mockapi.io/jobOffer", {
+        job: position,
+        description: Description,
         date: date,
       })
       .then((respons) => {
