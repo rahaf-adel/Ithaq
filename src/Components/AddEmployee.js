@@ -13,7 +13,6 @@ import {
     Heading,
     useColorModeValue,
   } from '@chakra-ui/react';
-import { NavLink } from 'react-router-dom';
 export default function AddEmployee() {
   const toast = useToast()
   const [img, setImg] = useState("")
@@ -55,7 +54,7 @@ export default function AddEmployee() {
           title: 'Added Succesfully.',
           status: 'success',
           position: "top",
-          duration: 9000,
+          duration: 7000,
           isClosable: true,
         })
           redirect();
@@ -89,9 +88,7 @@ export default function AddEmployee() {
             boxShadow={'lg'}
             p={20}
           >
-             {/* <form onClick={handleSubmit}> */}
              <form>
-
             <Stack spacing={4}>
               <FormControl id="name">
                 <FormLabel>Employee Name</FormLabel>
@@ -99,7 +96,6 @@ export default function AddEmployee() {
                   focusBorderColor='#1B668E'
                   type="text"
                   name="name"
-                  // value={"formValue.username"}
                   onChange={putName}
                   required
                 />
@@ -110,7 +106,6 @@ export default function AddEmployee() {
                   focusBorderColor='#1B668E'
                   type="text"
                   name="job"
-                  // value={"formValue.password"}
                   onChange={putJob}
                   required
                 />
@@ -121,7 +116,6 @@ export default function AddEmployee() {
                   focusBorderColor='#1B668E'
                   type="text"
                   name="company"
-                  // value={"formValue.password"}
                   onChange={putCompany}
                   required
                 />
@@ -132,28 +126,15 @@ export default function AddEmployee() {
                   focusBorderColor='#1B668E'
                   type="url"
                   name="linkedin"
-                  // value={"formValue.password"}
                   onChange={putLinkedIn}
                   required
                 />
               </FormControl>
-              {/* <FormControl id="date">
-                <FormLabel> date </FormLabel>
-                <Input
-                  focusBorderColor='#1B668E'
-                  type="date"
-                  name="date"
-                  // value={"formValue.password"}
-                  // onChange={handleChange}
-                  required
-                />
-              </FormControl> */}
               <FormControl id="img">
                 <FormLabel> Avatar </FormLabel>
                 <input 
                   type="file"
                   name="img"
-                  // value={"formValue.password"}
                    onChange={putImg}
                   required
                 />
@@ -167,8 +148,6 @@ export default function AddEmployee() {
                     bg: '#1B668E',
                     color:"white"
                   }}
-                  as={NavLink}
-                  to="#"
                   onClick={handelSubmit}
                 >
                  Add Employee
