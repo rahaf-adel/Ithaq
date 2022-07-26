@@ -33,12 +33,12 @@ export default function Home() {
   return (
     <div>
       <Header />
-      {/* <Flex
+      <Flex
         w={"full"}
         h={"100vh"}
         // backgroundSize={"cover"}
         // backgroundPosition={"center center"}
-      > */}
+      >
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
@@ -111,35 +111,7 @@ export default function Home() {
           </Stack>
         </Stack>
       </Container>
-      {/* <VStack
-          w={"full"}
-          justify={"center"}
-          px={useBreakpointValue({ base: 4, md: 8 })}
-          bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
-        >
-          <Stack maxW={"2xl"} align={"flex-start"} spacing={6}>
-            <Text
-              color={"white"}
-              fontWeight={700}
-              lineHeight={1.2}
-              fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
-            >
-              <Wave text="Ithaq With Us" effect="stretch" effectChange={1.5} />
-            </Text>
-          </Stack>
-        </VStack> */}
-      {/* </Flex> */}
-      {/* <Box zIndex="1" width="100%" position="absolute" height="20%">
-          <Box
-            bgGradient={useColorModeValue(
-              "radial(#1B668E 1px, transparent 1px)",
-              "radial(#E1EAF5 1px, transparent 1px)"
-            )}
-            backgroundSize="13px 20px"
-            opacity="0.7"
-            height="70%"
-          />
-        </Box> */}
+      </Flex>
       <Box mt={10}>
         <svg
           position="absolute"
@@ -199,6 +171,8 @@ export default function Home() {
         <Flex justifyContent="space-between">
           <Text
             mt={10}
+           ml={10}
+           mr={10}
             fontSize={"2xl"}
             fontWeight={700}
             position={"relative"}
@@ -210,13 +184,13 @@ export default function Home() {
               bottom: 10,
               left: 0,
               bg: "#1B668E",
-              //   bg: "#92B4EC",
               zIndex: -1,
             }}
           >
             our Partners
           </Text>
           <Button
+            mr={10}
             mt={10}
             fontSize={"lg"}
             fontWeight={700}
