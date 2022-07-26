@@ -29,7 +29,6 @@ export default function AddJopOffer() {
             boxShadow={'lg'}
             p={20}
           >
-             {/* <form onClick={handleSubmit}> */}
              <form>
 
             <Stack spacing={4}>
@@ -39,8 +38,6 @@ export default function AddJopOffer() {
                   focusBorderColor='#1B668E'
                   type="text"
                   name="position"
-                  // value={"formValue.password"}
-                  // onChange={handleChange}
                   required
                 />
               </FormControl>
@@ -50,8 +47,6 @@ export default function AddJopOffer() {
                   focusBorderColor='#1B668E'
                   type="url"
                   name="Description"
-                  // value={"formValue.password"}
-                  // onChange={handleChange}
                   required
                 />
               </FormControl>
@@ -61,8 +56,6 @@ export default function AddJopOffer() {
                   focusBorderColor='#1B668E'
                   type="date"
                   name="date"
-                  // value={"formValue.password"}
-                  // onChange={handleChange}
                   required
                 />
               </FormControl>
@@ -76,7 +69,7 @@ export default function AddJopOffer() {
                     color:"white"
                   }}
                   as={NavLink}
-                  to="/Dashboard"
+                  to="#"
                 >
                  Update Job
                 </Button>
