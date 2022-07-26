@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import './table.css';
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -10,8 +10,10 @@ import Paper from "@mui/material/Paper";
 import { UilEditAlt } from '@iconscout/react-unicons'
 import { UilTimes } from '@iconscout/react-unicons'
 import { Button } from 'react-bootstrap';
+import axios from 'axios'
+import { useToast } from '@chakra-ui/react'
 
-function createData(name, position, date, status) {
+function createData(name, position, date, status) {  
     return { name, position, date, status };
   }
   
@@ -41,12 +43,58 @@ function createData(name, position, date, status) {
   }
   
   export default function BasicTable() {
+    const toast = useToast()
+    const [data, setData] = useState([]);
+    // const [id, setId] = useState(null);
+  useEffect(() => {
+    // setId(localStorage.getItem("id"));
+    axios
+      .get("https://62d3e391cd960e45d44f818f.mockapi.io/Ithaq")
+      .then((res) => {
+        console.log(res.data);
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  const getData = ()=>{
+    axios
+    .get("https://62d3e391cd960e45d44f818f.mockapi.io/Ithaq")
+    .then((getData) => {
+      // console.log(res.data);
+       setData(getData.data);
+       toast({
+        title: 'Delete Succesfully.',
+        status: 'success',
+        position: "top",
+        duration: 9000,
+        isClosable: true,
+      })
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  }
+  const deleteFunction = (id) => {
+    axios
+      .delete(`https://62d3e391cd960e45d44f818f.mockapi.io/Ithaq/${id}`, {
+      })
+      .then((res) => {
+        console.log(res);
+        getData()
+        // navigate("/Home");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
     return (
         <div className="table" style={{marginTop:"30px"}}>
-        <h3 style={{marginBottom:"20px"}}>My Employees</h3>
+        <h3 style={{marginBottom:"20px",fontSize: "25px"}}>My Employees</h3>
           <TableContainer
             component={Paper}
-            style={{ boxShadow: "0px 13px 20px 0px #80808029" }}
+            style={{ boxShadow: "0px 13px 20px 0px #80808029" ,borderRadius: "0.7rem"}}
           >
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead>
@@ -59,21 +107,21 @@ function createData(name, position, date, status) {
                 </TableRow>
               </TableHead>
               <TableBody style={{ color: "white" }}>
-                {rows.map((row) => (
+                {data.map((row) => (
                   <TableRow
-                    key={row.name}
+                    // key={row.name}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
                     <TableCell component="th" scope="row">
                       {row.name}
                     </TableCell>
-                    <TableCell align="left">{row.position}</TableCell>
+                    <TableCell align="left">{row.job}</TableCell>
                     <TableCell align="left">{row.date}</TableCell>
                     <TableCell align="left">
                       <span className="status" style={makeStyle(row.status)}>{row.status}</span>
                     </TableCell>
                     <TableCell align="left" className="Details"><Button variant="outline-warning"><UilEditAlt/></Button></TableCell>
-                    <TableCell align="left" className="Details"><Button variant="outline-danger"><UilTimes/></Button></TableCell>
+                    <TableCell align="left" className="Details"><Button onClick={()=>deleteFunction(row.id)} variant="outline-danger"><UilTimes/></Button></TableCell>
                   </TableRow>
                 ))}
               </TableBody>

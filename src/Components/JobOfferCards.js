@@ -1,9 +1,11 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useToast } from '@chakra-ui/react'
+import STC from "./Assets/Images/STC.png";
 
 function JobOfferCards(props) {
   const toast = useToast()
+  console.log(props.jobs.img);
   return (
     <>
       <div class="jobOffercard">

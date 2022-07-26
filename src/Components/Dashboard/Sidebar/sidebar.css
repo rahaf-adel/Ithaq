@@ -26,7 +26,7 @@
     height: 3rem;
 }
 .logo > span > span {
-    color: var(--pink);
+    color: #FFD24C;
 }
 
 /* menu */
@@ -59,14 +59,14 @@
 }
   
 .active {
-    background: var(--activeItem);
+    background: #ffd24c45;
     margin-left: 0;
 }
-.active::before {
+.menu-item.active::before {
     content: "";
     width: 8px;
     height: 100%;
-    background: var(--pink);
+    background: #ffd24c;
     margin-right: calc(1rem - 8px);
 }
 
@@ -83,10 +83,11 @@
     .sidebar{
       position: fixed;
       z-index: 9;
-      background: #ffe0e0;
+      background: #fcf3d8;
       width: 55%;
       padding-right: 1rem;
       height: 100%;
+      margin-top: -16px;
     }
     .menu-item>span{
       display: block;
@@ -97,13 +98,14 @@
     .menu .menu-item:last-child {
       position: relative;
       margin-top: 6rem;
+      margin-top: 40px;
     }
     .bars{
       display: flex;
       position: fixed;
       top: 2rem;
       left:60%;
-      background:#ffe0e0;
+      background:#fcf3d8;
       padding:10px;
       border-radius: 10px;
       z-index: 9;

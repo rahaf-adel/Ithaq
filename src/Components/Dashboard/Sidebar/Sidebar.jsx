@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Button} from 'react-bootstrap'
-import logo from '../../Assets/Images/logo.jpeg';
+import logo from '../../Assets/Images/IthaqLogo.png'
 import {SidebarData} from '../../Assets/Data/Data';
 import {UilSignOutAlt} from '@iconscout/react-unicons';
 import { UilBars } from "@iconscout/react-unicons";

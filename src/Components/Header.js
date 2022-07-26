@@ -16,7 +16,7 @@ function Navbars() {
   return (
     <>
           <Navbar bg="light" expand="lg">
-              <Navbar.Brand href="/">
+              <Navbar.Brand style={{marginLeft:"20px"}} href="/">
                 <img
                   src={logo}
                   width="90"
@@ -25,7 +25,7 @@ function Navbars() {
                   className="d-inline-block align-top"
                 />
               </Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Toggle style={{marginRight:"20px"}}  aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="container-fluid">
                   {/* <Nav.Link as={NavLink} to='/'>Home</Nav.Link> */}
@@ -41,7 +41,7 @@ function Navbars() {
                   
                 </Nav>
                 {localStorage.getItem("isLogin")?(
-                <Button as={NavLink} to='/Dashboard'variant="secondary">Dashboard</Button>):(
+                <Button style={{marginRight:"20px"}}  as={NavLink} to='/Dashboard'variant="secondary">Dashboard</Button>):(
                  <Button as={NavLink} to={'/login'}variant="warning"> Login</Button>
                 )
                 }

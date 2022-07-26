@@ -5,7 +5,7 @@ import './rightside.css'
 const RightSide = () => {
   return (
     <div className='rightside'>
-      <h3 style={{ marginTop: "-650px"}}>Requests</h3>
+      <h3 style={{fontSize: "25px"}}>Requests</h3>
       <Requests />
     </div>
   )

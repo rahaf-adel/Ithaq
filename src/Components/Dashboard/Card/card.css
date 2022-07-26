@@ -84,7 +84,7 @@
   }
   
   .chart-container {
-    width: 70%;
+    width: 65%;
   }
   
   @media screen and (max-width: 1200px) {
@@ -98,8 +98,11 @@
   @media screen and (max-width: 768px) {
     .expanded-card {
       top: 8rem;
-      height: 50%;
-      left: 25px;
+      height: 25%;
+      left: 53px;
       width: 80%;
+    }
+    .chart-container {
+      width: 85%;
     }
   }

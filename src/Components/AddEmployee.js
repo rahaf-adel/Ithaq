@@ -152,7 +152,7 @@ export default function AddEmployee() {
               </FormControl> */}
               <FormControl id="img">
                 <FormLabel> Avatar </FormLabel>
-                <input
+                <input 
                   type="file"
                   name="img"
                   // value={"formValue.password"}

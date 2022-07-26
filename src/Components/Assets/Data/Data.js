@@ -44,8 +44,8 @@ export const cardsData = [
     {
       title: "Employees",
       color: {
-        backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
-        boxShadow: "0px 10px 20px 0px #e0c6f5",
+        backGround: "linear-gradient(180deg, #1B668E 0%, #1B668E 100%)",
+        boxShadow: "0px 10px 20px 0px #E1EAF5",
       },
       barValue: 70,
       value: "500",
@@ -60,8 +60,8 @@ export const cardsData = [
     {
       title: "Partnership",
       color: {
-        backGround: "linear-gradient(180deg, #FF919D 0%, #FC929D 100%)",
-        boxShadow: "0px 10px 20px 0px #FDC0C7",
+        backGround: "linear-gradient(180deg, #FFD24C 0%, #FFD24C 100%)",
+        boxShadow: "0px 10px 20px 0px #E1EAF5",
       },
       barValue: 80,
       value: "30",
@@ -77,8 +77,8 @@ export const cardsData = [
       title: "My Jobs",
       color: {
         backGround:
-          "linear-gradient(rgb(248, 212, 154) -146.42%, rgb(255 202 113) -46.42%)",
-        boxShadow: "0px 10px 20px 0px #F9D59B",
+          "linear-gradient(180deg,rgb(174 210 249) 0%, rgb(174 210 249) 100%)",
+        boxShadow: "0px 10px 20px 0px #E1EAF5",
       },
       barValue: 60,
       value: "100",

@@ -7,7 +7,7 @@ import JobTable from '../Table/JobTable';
 export const MainDash = () => {
   return (
     <div className="main-dash">
-        <h1>Dashboard</h1>
+        <h1 style={{fontSize: "25px"}}>Dashboard</h1>
         <Cards />
         <EmpTable />
         <JobTable />

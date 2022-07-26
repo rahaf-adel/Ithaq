@@ -8,6 +8,7 @@ const Dashboard = () => {
 
 
     return (
+        <main>
         <div className="dashboard">
             <div className="dashboard-glass">
                 <Sidebar />
@@ -15,6 +16,7 @@ const Dashboard = () => {
                 <RightSide />
             </div>
         </div>
+        </main>
     )
 }
 
