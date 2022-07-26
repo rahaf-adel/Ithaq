@@ -8,13 +8,14 @@ import {
     FormControl,
     FormLabel,
     Input,
+    Checkbox,
     Stack,
+    Link,
     Button,
     Heading,
     useColorModeValue,
   } from '@chakra-ui/react';
-import { NavLink } from 'react-router-dom';
-export default function AddEmployee() {
+export default function UpdateEmployee() {
   const toast = useToast()
   const [img, setImg] = useState("")
   const [name, setName] = useState("")
@@ -52,7 +53,7 @@ export default function AddEmployee() {
         console.log(respons.data);
         // alert(respons.data.msg);
         toast({
-          title: 'Added Succesfully.',
+          title: 'Update Succesfully.',
           status: 'success',
           position: "top",
           duration: 9000,
@@ -69,7 +70,7 @@ export default function AddEmployee() {
   
   const navigate = useNavigate();
   function redirect() {
-    navigate("/Employees");
+    navigate("/Dashboard");
   }
 
   return (
@@ -89,7 +90,6 @@ export default function AddEmployee() {
             boxShadow={'lg'}
             p={20}
           >
-             {/* <form onClick={handleSubmit}> */}
              <form>
 
             <Stack spacing={4}>
@@ -137,20 +137,9 @@ export default function AddEmployee() {
                   required
                 />
               </FormControl>
-              {/* <FormControl id="date">
-                <FormLabel> date </FormLabel>
-                <Input
-                  focusBorderColor='#1B668E'
-                  type="date"
-                  name="date"
-                  // value={"formValue.password"}
-                  // onChange={handleChange}
-                  required
-                />
-              </FormControl> */}
               <FormControl id="img">
                 <FormLabel> Avatar </FormLabel>
-                <input 
+                <input
                   type="file"
                   name="img"
                   // value={"formValue.password"}
@@ -167,11 +156,10 @@ export default function AddEmployee() {
                     bg: '#1B668E',
                     color:"white"
                   }}
-                  as={NavLink}
-                  to="#"
+                
                   onClick={handelSubmit}
                 >
-                 Add Employee
+                 Update Informations
                 </Button>
               </Stack>
             </Stack>

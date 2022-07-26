@@ -120,7 +120,7 @@ function createData(name, position, date, status) {
                     <TableCell align="left">
                       <span className="status" style={makeStyle(row.status)}>{row.status}</span>
                     </TableCell>
-                    <TableCell align="left" className="Details"><Button variant="outline-warning"><UilEditAlt/></Button></TableCell>
+                    <TableCell align="left" className="Details"><a href="/UpdateEmployeeInfo"><Button variant="outline-warning"><UilEditAlt/></Button> </a></TableCell>
                     <TableCell align="left" className="Details"><Button onClick={()=>deleteFunction(row.id)} variant="outline-danger"><UilTimes/></Button></TableCell>
                   </TableRow>
                 ))}
