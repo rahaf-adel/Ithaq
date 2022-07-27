@@ -20,7 +20,6 @@ export default function AddEmployee() {
   const [company, setCompany] = useState("")
   const [job, setJob] = useState("")
   const [linkedin, setlinkedIn] = useState("")
-  const [state, setState] = useState("")
   const [date, setDate] = useState("")
 
   const putImg = (e) => {
@@ -38,9 +37,6 @@ export default function AddEmployee() {
   const putLinkedIn= (e)=>{
     setlinkedIn(e.target.value);
   };
-  const putstate = (e) => {
-    setState(e.target.value);
-  };
   const putDate = (e) => {
     setDate(e.target.value);
   };
@@ -54,7 +50,6 @@ export default function AddEmployee() {
         company:company,
         position:job,
         linkedin:linkedin,
-        state:state,
         add_date:date,
 
       })
