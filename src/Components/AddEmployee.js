@@ -17,10 +17,8 @@ export default function AddEmployee() {
   const toast = useToast()
   const [img, setImg] = useState("")
   const [name, setName] = useState("")
-  const [company, setCompany] = useState("")
   const [job, setJob] = useState("")
   const [linkedin, setlinkedIn] = useState("")
-  const [date, setDate] = useState("")
 
   const putImg = (e) => {
     setImg(e.target.value);
@@ -28,31 +26,24 @@ export default function AddEmployee() {
   const putName = (e) => {
     setName(e.target.value);
   };
-  const putCompany = (e) => {
-    setCompany(e.target.value);
-  };
+  
   const putJob = (e) => {
     setJob(e.target.value);
   };
   const putLinkedIn= (e)=>{
     setlinkedIn(e.target.value);
   };
-  const putDate = (e) => {
-    setDate(e.target.value);
-  };
+  
   const handelSubmit = (e) => {
     e.preventDefault();
     console.log("Submitted from ------>");
     axios
-      .post("https://62d3e391cd960e45d44f818f.mockapi.io/Ithaq", {
+      .post("http://127.0.0.1:8000/emp/add_emp/", {
         avatar: img,
         name: name,
-        company:company,
         position:job,
         linkedin:linkedin,
-        add_date:date,
-
-      })
+      },{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
       .then((respons) => {
         console.log(respons.data);
         // alert(respons.data.msg);
@@ -116,16 +107,6 @@ export default function AddEmployee() {
                   required
                 />
               </FormControl>
-              <FormControl id="company">
-                <FormLabel> Company </FormLabel>
-                <Input
-                  focusBorderColor='#1B668E'
-                  type="text"
-                  name="company"
-                  onChange={putCompany}
-                  required
-                />
-              </FormControl>
               <FormControl id="linkedin">
                 <FormLabel> Linked In </FormLabel>
                 <Input
@@ -142,15 +123,6 @@ export default function AddEmployee() {
                   type="url"
                   name="avatar"
                   onChange={putImg}
-                  required
-                />
-              </FormControl>
-              <FormControl id="add_date">
-                <FormLabel> Date </FormLabel>
-                <input 
-                  type="date"
-                  name="add_date"
-                  onChange={putDate}
                   required
                 />
               </FormControl>

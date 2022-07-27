@@ -9,13 +9,13 @@ function EmployeeCards(props) {
   return (
     <div className="cardOfStaff">
       <div className="imageBox">
-        <img src={props.employees.img} style={{width:"260Px",height:"260px"}}/>
+        <img src={props.employees.avatar} style={{width:"260Px",height:"260px"}}/>
       </div>
       <div className="contentStaff">
         <h2 style={{fontSize:"25px"}}> {props.employees.name}</h2>
-        <h5> {props.employees.job}</h5>
+        <h5> {props.employees.position}</h5>
         <br />
-        <h6> {props.employees.company}</h6>
+        <h6> {props.employees.company.name}</h6>
         <br />
         <p>
           

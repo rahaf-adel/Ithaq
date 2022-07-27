@@ -15,10 +15,10 @@ function Employee() {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://62d3e391cd960e45d44f818f.mockapi.io/Ithaq")
+      .get("http://127.0.0.1:8000/emp/get_emp/",{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
       .then((res) => {
-        console.log(res.data);
-        setData(res.data);
+        console.log(res.data.employees);
+        setData(res.data.employees);
       })
       .catch((err) => {
         console.log(err);
