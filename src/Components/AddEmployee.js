@@ -155,7 +155,7 @@ export default function AddEmployee() {
                 <input 
                   type="date"
                   name="add_date"
-                  onChange={putImg}
+                  onChange={putDate}
                   required
                 />
               </FormControl>
