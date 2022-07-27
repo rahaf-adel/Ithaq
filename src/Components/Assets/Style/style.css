@@ -17,6 +17,15 @@
     .navbar-collapse{
         margin-left: 20px;
     }
+    .css-14wrxsw::after{
+        margin-bottom: 30px;
+    }
+    .chakra-icon.chakra-icon.css-hgla2m{
+        display: none;
+    }
+    .chakra-text.css-1c6x6wi{
+        display: none;
+    }
     .navbar-toggler{
         margin-right: 20px;
     }
