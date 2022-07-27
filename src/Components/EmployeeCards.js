@@ -3,8 +3,31 @@ import { Button } from "react-bootstrap";
 import { SocialIcon } from "react-social-icons";
 import { FaHeart } from "react-icons/fa";
 import { useToast } from '@chakra-ui/react'
+import {Link} from 'react-router-dom'
+import axios from "axios"
 
 function EmployeeCards(props) {
+  const sendRequest =(id)=>{
+    axios.post(`http://127.0.0.1:8000/emp/add_req/${id}`, {}, {
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+    })
+    // toast({
+    //   title: 'Sent Succesfully.',
+    //   status: 'success',
+    //   position: "top",
+    //   duration: 9000,
+    //   isClosable: true,
+    // })
+    .then((response)=>{
+      console.log(response.data);
+      alert(response.data.msg)
+    })
+    .catch((err) => { 
+      console.log(err.response.data.msg)
+      alert(err.response.data.msg)
+    })
+  }
+  
   const toast = useToast()
   return (
     <div className="cardOfStaff">
@@ -22,17 +45,10 @@ function EmployeeCards(props) {
           <Button style={{border:"none"}} href="#" variant="outlined" color="error">
           <FaHeart style={{fontize:"30Px"}} className="fav" />
           </Button>
-          <Button href="#" variant="warning"  onClick={() =>
-        toast({
-          title: 'Sent Succesfully.',
-          status: 'success',
-          position: "top",
-          duration: 9000,
-          isClosable: true,
-        })
-      }>
+          <Button href="#" variant="warning"  onClick={()=>sendRequest(props.employees.id)}>
             Send
           </Button>{" "}
+          
           <SocialIcon style={{width:"40Px",height:"40px"}} url={props.employees.linkedin} />{" "}
         </p>
       </div>

@@ -33,11 +33,11 @@ export default function AddJopOffer() {
     e.preventDefault();
     console.log("Submitted from ------>");
     axios
-      .post("https://62d3e391cd960e45d44f818f.mockapi.io/jobOffer", {
-        job: position,
+      .post("http://127.0.0.1:8000/job/add_job", {
+        position: position,
         description: Description,
         date: date,
-      })
+      },{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
       .then((respons) => {
         console.log(respons.data);
         // alert(respons.data.msg);

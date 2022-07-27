@@ -1,4 +1,4 @@
-import React ,{useState,useEffect} from 'react';
+import React,{useState,useEffect} from 'react';
 import './table.css';
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -13,7 +13,7 @@ import { Button } from 'react-bootstrap';
 import axios from 'axios'
 import { useToast } from '@chakra-ui/react'
 
-function createData(name, position, date, status) {
+function createData(name, position, date, status) {  
     return { name, position, date, status };
   }
   
@@ -41,16 +41,21 @@ function createData(name, position, date, status) {
       }
     }
   }
+
+  // const {user}=useAuth0();
+  // console.assert(user.sub)
   
   export default function BasicTable() {
     const toast = useToast()
     const [data, setData] = useState([]);
+    // const [id, setId] = useState(null);
   useEffect(() => {
+    // setId(localStorage.getItem("id"));
     axios
-      .get("https://62d3e391cd960e45d44f818f.mockapi.io/jobOffer")
+      .get("http://127.0.0.1:8000/job/my_jobs/",{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
       .then((res) => {
-        console.log(res.data);
-        setData(res.data);
+        console.log(res.data.employees);
+        setData(res.data.employees);
       })
       .catch((err) => {
         console.log(err);
@@ -58,7 +63,7 @@ function createData(name, position, date, status) {
   }, []);
   const getData = ()=>{
     axios
-    .get("https://62d3e391cd960e45d44f818f.mockapi.io/jobOffer")
+    .get("http://127.0.0.1:8000/job/my_jobs/",{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
     .then((getData) => {
       // console.log(res.data);
        setData(getData.data);
@@ -76,8 +81,7 @@ function createData(name, position, date, status) {
   }
   const deleteFunction = (id) => {
     axios
-      .delete(`https://62d3e391cd960e45d44f818f.mockapi.io/jobOffer/${id}`, {
-      })
+      .delete(`http://127.0.0.1:8000/job/delete_job/${id}`, { headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
       .then((res) => {
         console.log(res);
         getData()
@@ -87,7 +91,6 @@ function createData(name, position, date, status) {
         console.log(err);
       });
   };
-
     return (
         <div className="table" style={{marginTop:"30px"}}>
         <h3 style={{marginBottom:"20px",fontSize: "25px"}}>My Job Offers</h3>
@@ -101,7 +104,7 @@ function createData(name, position, date, status) {
                   {/* <TableCell>Name</TableCell> */}
                   <TableCell align="left">Position</TableCell>
                   <TableCell align="left">Date</TableCell>
-                  <TableCell align="left">Status</TableCell>
+                  {/* <TableCell align="left">Status</TableCell> */}
                   <TableCell align="left"></TableCell>
                 </TableRow>
               </TableHead>
@@ -114,12 +117,12 @@ function createData(name, position, date, status) {
                     {/* <TableCell component="th" scope="row">
                       {row.name}
                     </TableCell> */}
-                    <TableCell align="left">{row.job}</TableCell>
-                    <TableCell align="left">{row.date}</TableCell>
-                    <TableCell align="left">
-                      <span className="status" style={makeStyle(row.status)}>{row.status}</span>
-                    </TableCell>
-                    <TableCell align="left" className="Details"><a href="/UpdateJobOffer"><Button variant="outline-warning"><UilEditAlt/></Button></a></TableCell>
+                    <TableCell align="left">{row.position}</TableCell>
+                    <TableCell align="left">{row.current_date}</TableCell>
+                    {/* <TableCell align="left">
+                      <span className="status" style={makeStyle(row.state)}>{row.state}</span>
+                    </TableCell> */}
+                    <TableCell align="left" className="Details"><a href="/UpdateEmployeeInfo"><Button variant="outline-warning"><UilEditAlt/></Button> </a></TableCell>
                     <TableCell align="left" className="Details"><Button onClick={()=>deleteFunction(row.id)} variant="outline-danger"><UilTimes/></Button></TableCell>
                   </TableRow>
                 ))}

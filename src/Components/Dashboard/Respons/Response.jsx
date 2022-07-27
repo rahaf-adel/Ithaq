@@ -1,20 +1,38 @@
-import React from 'react'
-import {RequestData} from '../../Assets/Data/Data';
+import React,{useState,useEffect} from 'react';
+import axios from 'axios'
+import {Button} from 'react-bootstrap'
+import {AiOutlineCheck} from "react-icons/ai"
+import {TiDeleteOutline} from "react-icons/ti"
 
 function Response() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    // setId(localStorage.getItem("id"));
+    axios
+      .get(`http://127.0.0.1:8000/emp/get_received_req/`,{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
+      .then((res) => {
+        console.log(res.data.employees);
+        setData(res.data.req);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <div className="requests">
         <h3 style={{fontSize: "25px"}}>Response</h3>
-      {RequestData.map((request) => {
+      {data.map((request) => {
         return (
           <div className="request">
-            <img src={request.img} alt="profile" />
+          <Button variant='outline-success'><AiOutlineCheck/></Button>
+          <Button variant="outline-danger" ><TiDeleteOutline/></Button>
             <div className="noti">
               <div  style={{marginBottom: '0.5rem'}}>
-                <span>{request.name}</span>
-                <span> {request.noti}</span>
+                <span>{request.company.name}</span>
+                <span> has requested your employee: </span>
+                <span><b>{request.employee.name}</b></span>
               </div>
-                <span>{request.time}</span>
+                {/* <span>{request.time}</span> */}
             </div>
           </div>
         );

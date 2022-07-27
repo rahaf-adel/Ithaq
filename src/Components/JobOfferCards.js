@@ -10,7 +10,7 @@ function JobOfferCards(props) {
     <>
       <div class="jobOffercard">
         <div className="innerCard">
-          <h3 style={{fontSize: "20px"}}>{props.jobs.job}</h3>
+          <h3 style={{fontSize: "20px"}}>{props.jobs.position}</h3>
           <br/>
           <p>{props.jobs.description}</p>
           <br/>
@@ -30,8 +30,8 @@ function JobOfferCards(props) {
           <div class="coverBack"></div>
           <div class="coverFront">
             <div>
-              <h5>{props.jobs.job}</h5>
-              <img src={props.jobs.img} class="sh_img" />
+              <h5>{props.jobs.position}</h5>
+              {<img src={props.jobs.company.avatar} class="sh_img" />}
             </div>
           </div>
         </div>

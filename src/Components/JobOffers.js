@@ -13,10 +13,10 @@ function JobOffers() {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://62d3e391cd960e45d44f818f.mockapi.io/jobOffer")
+      .get("http://127.0.0.1:8000/job/get_jobs",{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
       .then((res) => {
-        console.log(res.data);
-        setData(res.data);
+        console.log(res.data.jobs);
+        setData(res.data.jobs);
       })
       .catch((err) => {
         console.log(err);
