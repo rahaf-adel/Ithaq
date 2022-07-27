@@ -40,7 +40,7 @@ export default function SimpleCard() {
     e.preventDefault();
     console.log("Submitted from ------>");
     axios
-      .post("http://127.0.0.1:8000/users/login", {
+      .post("http://127.0.0.1:8000/login", {
         username: userName,
         password: password,
       })
