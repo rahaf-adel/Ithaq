@@ -20,6 +20,8 @@ export default function AddEmployee() {
   const [company, setCompany] = useState("")
   const [job, setJob] = useState("")
   const [linkedin, setlinkedIn] = useState("")
+  const [state, setState] = useState("")
+  const [date, setDate] = useState("")
 
   const putImg = (e) => {
     setImg(e.target.value);
@@ -36,16 +38,25 @@ export default function AddEmployee() {
   const putLinkedIn= (e)=>{
     setlinkedIn(e.target.value);
   };
+  const putstate = (e) => {
+    setState(e.target.value);
+  };
+  const putDate = (e) => {
+    setDate(e.target.value);
+  };
   const handelSubmit = (e) => {
     e.preventDefault();
     console.log("Submitted from ------>");
     axios
       .post("https://62d3e391cd960e45d44f818f.mockapi.io/Ithaq", {
-        img: img,
+        avatar: img,
         name: name,
         company:company,
-        job:job,
-        linkedin:linkedin
+        position:job,
+        linkedin:linkedin,
+        state:state,
+        add_date:date,
+
       })
       .then((respons) => {
         console.log(respons.data);
@@ -100,12 +111,12 @@ export default function AddEmployee() {
                   required
                 />
               </FormControl>
-              <FormControl id="job">
+              <FormControl id="position">
                 <FormLabel> Position </FormLabel>
                 <Input
                   focusBorderColor='#1B668E'
                   type="text"
-                  name="job"
+                  name="position"
                   onChange={putJob}
                   required
                 />
@@ -130,12 +141,21 @@ export default function AddEmployee() {
                   required
                 />
               </FormControl>
-              <FormControl id="img">
+              <FormControl id="avatar">
                 <FormLabel> Avatar </FormLabel>
+                <Input 
+                  type="url"
+                  name="avatar"
+                  onChange={putImg}
+                  required
+                />
+              </FormControl>
+              <FormControl id="add_date">
+                <FormLabel> Date </FormLabel>
                 <input 
-                  type="file"
-                  name="img"
-                   onChange={putImg}
+                  type="date"
+                  name="add_date"
+                  onChange={putDate}
                   required
                 />
               </FormControl>
