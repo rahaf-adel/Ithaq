@@ -13,17 +13,8 @@ import {
 } from '@chakra-ui/react';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link as RouteLink,
-} from 'react-router-dom';
-import Dashboard from './Dashboard/Dashboard';
-import { Navigate   } from "react-router-dom";
 import { useState } from 'react';
-// import axios from 'axios';
-import { NavLink } from 'react-router-dom';
+
 
 export default function SimpleCard() {
   const [userName, setUserName] = useState("")
@@ -40,21 +31,25 @@ export default function SimpleCard() {
     e.preventDefault();
     console.log("Submitted from ------>");
     axios
-      .post("http://127.0.0.1:8000/users/login", {
+      .post("http://127.0.0.1:8000/user/login", {
         username: userName,
         password: password,
       })
       .then((respons) => {
-        console.log(respons.data);
+        console.log(respons.data.msg);
         if (
-          respons.data.msg == "Wellcome to Atim system >> Your token is ready"
+          respons.data.msg == "Your token is ready"
         ) {
           redirect();
+        }
+        else{
+          alert(respons.data.msg)
         }
       })
       .catch((err) => {
         console.log(err);
         console.log("err");
+        
         alert(err.respons.data.error.message);
       });
       localStorage.setItem("username", userName)
@@ -67,14 +62,6 @@ export default function SimpleCard() {
   function redirect() {
     navigate("/Dashboard");
   }
-
-//   const loginUser=() =>{
-   
-//         // navigate("/")
-//     // window.location.reload(false);
-    
-// }
-
   return (
     <>
    
