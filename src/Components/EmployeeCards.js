@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { SocialIcon } from "react-social-icons";
 import { FaHeart } from "react-icons/fa";
-import { useToast } from '@chakra-ui/react'
+// import { useToast } from '@chakra-ui/react'
 import axios from "axios"
 
 function EmployeeCards(props) {
