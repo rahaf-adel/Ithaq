@@ -3,7 +3,6 @@ import { Button } from "react-bootstrap";
 import { SocialIcon } from "react-social-icons";
 import { FaHeart } from "react-icons/fa";
 import { useToast } from '@chakra-ui/react'
-import {Link} from 'react-router-dom'
 import axios from "axios"
 
 function EmployeeCards(props) {
@@ -28,11 +27,11 @@ function EmployeeCards(props) {
     })
   }
   
-  const toast = useToast()
+  // const toast = useToast()
   return (
     <div className="cardOfStaff">
       <div className="imageBox">
-        <img src={props.employees.avatar} style={{width:"260Px",height:"260px"}}/>
+        <img src={props.employees.avatar} style={{width:"260Px",height:"260px"}} alt=""/>
       </div>
       <div className="contentStaff">
         <h2 style={{fontSize:"25px"}}> {props.employees.name}</h2>

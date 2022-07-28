@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useToast } from '@chakra-ui/react'
-import STC from "./Assets/Images/STC.png";
+// import STC from "./Assets/Images/STC.png";
 
 function JobOfferCards(props) {
   const toast = useToast()
@@ -31,7 +31,7 @@ function JobOfferCards(props) {
           <div class="coverFront">
             <div>
               <h5>{props.jobs.position}</h5>
-              {<img src={props.jobs.company.avatar} class="sh_img" />}
+              {<img src={props.jobs.company.avatar} class="sh_img" alt="" />}
             </div>
           </div>
         </div>

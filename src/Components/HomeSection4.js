@@ -1,10 +1,10 @@
-import { Container, SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import SAFCSP from "./Assets/Images/SAFCSPLogo.png";
-import STC from "./Assets/Images/STCLogo.png";
-import MOCITLogo from "./Assets/Images/MOCITLogo.png";
-import HomeSection3Temp from "./HomeSection3Temp";
-import Sdaia from "./Assets/Images/SdaiaLogo.png";
+// import SAFCSP from "./Assets/Images/SAFCSPLogo.png";
+// import STC from "./Assets/Images/STCLogo.png";
+// import MOCITLogo from "./Assets/Images/MOCITLogo.png";
+// import HomeSection3Temp from "./HomeSection3Temp";
+// import Sdaia from "./Assets/Images/SdaiaLogo.png";
 import HomeSection4Temp from "./HomeSection4Temp";
 import { MdContactMail } from "react-icons/md";
 import { AiOutlineForm } from "react-icons/ai";

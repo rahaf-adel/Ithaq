@@ -1,10 +1,4 @@
 import React ,{useState,useEffect} from "react";
-import employee1 from "./Assets/Images/employee1.png";
-import employee2 from "./Assets/Images/employee2.png";
-import employee3 from "./Assets/Images/employee3.png";
-import employee4 from "./Assets/Images/employee4.png";
-import employee5 from "./Assets/Images/employee5.png";
-import employee6 from "./Assets/Images/employee6.png";
 import { CardGroup } from "react-bootstrap";
 import Cards from "./EmployeeCards";
 import Header from './Header'

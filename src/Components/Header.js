@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Navbar, Container, Button } from "react-bootstrap";
+import { Nav, Navbar, Button } from "react-bootstrap";
 import logo from "./Assets/Images/IthaqLogo.png";
 import { NavLink } from "react-router-dom";
 function Navbars() {
@@ -21,6 +21,7 @@ function Navbars() {
             height="60"
             style={{ borderRadius: "50%" , marginLeft: "20px"}}
             className="d-inline-block align-top"
+            alt=""
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
