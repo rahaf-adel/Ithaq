@@ -33,7 +33,7 @@ export default function AddJopOffer() {
     e.preventDefault();
     console.log("Submitted from ------>");
     axios
-      .post("http://127.0.0.1:8000/job/add_job", {
+      .post("https://projectithaq.herokuapp.com/job/add_job", {
         position: position,
         description: Description,
         date: date,

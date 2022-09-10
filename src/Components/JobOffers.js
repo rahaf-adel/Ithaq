@@ -13,7 +13,7 @@ function JobOffers() {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/job/get_jobs",{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
+      .get("https://projectithaq.herokuapp.com/job/get_jobs",{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
       .then((res) => {
         console.log(res.data.jobs);
         setData(res.data.jobs);
@@ -22,56 +22,6 @@ function JobOffers() {
         console.log(err);
       });
   }, []);
-  // const jobOffers = [
-  //   {
-  //     img: SDAIA,
-  //     company: "SDAIA",
-  //     job: "Front End Developer",
-  //     description: "Responsible for developing new user-facing features, determining the structure and design of web pages, building reusable codes, optimizing page loading times, and using a variety of markup languages to create the web pages.",
-  //   },
-  //   {
-  //     img: STC,
-  //     company: "STC",
-  //     job: "Back End Developer",
-  //     description: "Responsible for  creates components and features on the server-side, indirectly accessed by a user through a front end application or system. ",
-  //   },
-  //   {
-  //     img: SFCPD,
-  //     company: "SAUDI FEDERATION FOR CYBERSECURITY, PROGRAMMING & DRONES",
-  //     job: "Full Stack Developer",
-  //     description: "responsible for working on both front-end and back-end development processes",
-  //   },
-  //   {
-  //     img: MCIT,
-  //     company: "MINISTRY OF COMMUNICATIONS AND INFORMATION TECHNOLOGY",
-  //     job: "Software Engineer",
-  //     description: "Responsible for  designs and builds computer programs that power mobile devices and desktop computers.",
-  //   },
-  //   {
-  //       img: MCIT,
-  //       company: "MINISTRY OF COMMUNICATIONS AND INFORMATION TECHNOLOGY",
-  //       job: "Software Engineer",
-  //       description: "Responsible for  designs and builds computer programs that power mobile devices and desktop computers.",
-  //     },
-  //     {
-  //       img: MCIT,
-  //       company: "MINISTRY OF COMMUNICATIONS AND INFORMATION TECHNOLOGY",
-  //       job: "Software Engineer",
-  //       description: "Responsible for  designs and builds computer programs that power mobile devices and desktop computers.",
-  //     },
-  //     {
-  //       img: STC,
-  //       company: "STC",
-  //       job: "Back End Developer",
-  //       description: "Responsible for  creates components and features on the server-side, indirectly accessed by a user through a front end application or system. ",
-  //     },
-  //     {
-  //       img: SFCPD,
-  //       company: "SAUDI FEDERATION FOR CYBERSECURITY, PROGRAMMING & DRONES",
-  //       job: "Full Stack Developer",
-  //       description: "responsible for working on both front-end and back-end development processes",
-  //     },
-  // ];
   const jobOffersList = data.map((value) => <Cards jobs={value} />);
   return (
     <>

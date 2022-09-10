@@ -41,7 +41,7 @@ import { useToast } from '@chakra-ui/react'
   useEffect(() => {
     // setId(localStorage.getItem("id"));
     axios
-      .get(`http://127.0.0.1:8000/emp/my_emp/`,{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
+      .get(`https://projectithaq.herokuapp.com/emp/my_emp/`,{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
       .then((res) => {
         console.log(res.data);
         setData(res.data.employees);
@@ -52,7 +52,7 @@ import { useToast } from '@chakra-ui/react'
   }, []);
   const getData = ()=>{
     axios
-    .get("http://127.0.0.1:8000/emp/my_emp/",{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
+    .get("https://projectithaq.herokuapp.com/emp/my_emp/",{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
     .then((getData) => {
       // console.log(res.data);
        setData(getData.data);
@@ -70,7 +70,7 @@ import { useToast } from '@chakra-ui/react'
   }
   const deleteFunction = (id) => {
     axios
-      .delete(`http://127.0.0.1:8000/emp/delete_emp/${id}`, { headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
+      .delete(`https://projectithaq.herokuapp.com/emp/delete_emp/${id}`, { headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
       .then((res) => {
         console.log(res);
         getData()

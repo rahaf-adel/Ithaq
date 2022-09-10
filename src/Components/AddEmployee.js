@@ -38,7 +38,7 @@ export default function AddEmployee() {
     e.preventDefault();
     console.log("Submitted from ------>");
     axios
-      .post("http://127.0.0.1:8000/emp/add_emp/", {
+      .post("https://projectithaq.herokuapp.com/emp/add_emp/", {
         avatar: img,
         name: name,
         position:job,

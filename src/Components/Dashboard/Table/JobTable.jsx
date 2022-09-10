@@ -52,7 +52,7 @@ function createData(name, position, date, status) {
   useEffect(() => {
     // setId(localStorage.getItem("id"));
     axios
-      .get("http://127.0.0.1:8000/job/my_jobs/",{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
+      .get("https://projectithaq.herokuapp.com/job/my_jobs/",{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
       .then((res) => {
         console.log(res.data.employees);
         setData(res.data.employees);
@@ -63,7 +63,7 @@ function createData(name, position, date, status) {
   }, []);
   const getData = ()=>{
     axios
-    .get("http://127.0.0.1:8000/job/my_jobs/",{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
+    .get("https://projectithaq.herokuapp.com/job/my_jobs/",{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
     .then((getData) => {
       // console.log(res.data);
        setData(getData.data);
@@ -81,7 +81,7 @@ function createData(name, position, date, status) {
   }
   const deleteFunction = (id) => {
     axios
-      .delete(`http://127.0.0.1:8000/job/delete_job/${id}`, { headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
+      .delete(`https://projectithaq.herokuapp.com/job/delete_job/${id}`, { headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
       .then((res) => {
         console.log(res);
         getData()

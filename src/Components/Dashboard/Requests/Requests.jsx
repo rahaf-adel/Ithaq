@@ -9,7 +9,7 @@ const Requests = () => {
   useEffect(() => {
     // setId(localStorage.getItem("id"));
     axios
-      .get(`http://127.0.0.1:8000/emp/get_received_req/`,{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
+      .get(`https://projectithaq.herokuapp.com/emp/get_received_req/`,{ headers : { Authorization: `Bearer ${localStorage.getItem("token")}`}})
       .then((res) => {
         console.log(res.data.employees);
         setData(res.data.req);

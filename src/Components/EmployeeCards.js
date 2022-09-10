@@ -8,8 +8,8 @@ import axios from "axios"
 
 function EmployeeCards(props) {
   const sendRequest =(id)=>{
-    axios.post(`http://127.0.0.1:8000/emp/add_req/${id}`, {}, {
-      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+    axios.post(`https://projectithaq.herokuapp.com/emp/add_req/${id}`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     })
     // toast({
     //   title: 'Sent Succesfully.',
@@ -19,12 +19,11 @@ function EmployeeCards(props) {
     //   isClosable: true,
     // })
     .then((response)=>{
-      console.log(response.data);
-      alert(response.data.msg)
+      console.log(response);
     })
     .catch((err) => { 
-      console.log(err.response.data.msg)
-      alert(err.response.data.msg)
+      console.log(err)
+      alert(err)
     })
   }
   
