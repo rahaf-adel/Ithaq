@@ -2,7 +2,7 @@ import {
   Box,
   chakra,
   Container,
-  Img,
+  // Img,
   Link,
   Stack,
   Text,

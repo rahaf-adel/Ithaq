@@ -1,8 +1,8 @@
 import React , {useState,useEffect} from "react";
-import SDAIA from "./Assets/Images/SdaiaLogo.png";
-import STC from "./Assets/Images/STC.png";
-import SFCPD from "./Assets/Images/SAFCSPLogo.png";
-import MCIT from "./Assets/Images/MOCITLogo.png";
+// import SDAIA from "./Assets/Images/SdaiaLogo.png";
+// import STC from "./Assets/Images/STC.png";
+// import SFCPD from "./Assets/Images/SAFCSPLogo.png";
+// import MCIT from "./Assets/Images/MOCITLogo.png";
 import { CardGroup } from "react-bootstrap";
 import Cards from "./JobOfferCards";
 import Header from './Header'

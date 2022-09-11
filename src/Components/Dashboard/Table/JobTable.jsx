@@ -13,34 +13,28 @@ import { Button } from 'react-bootstrap';
 import axios from 'axios'
 import { useToast } from '@chakra-ui/react'
 
-function createData(name, position, date, status) {  
-    return { name, position, date, status };
-  }
-  
-  const rows = [
-    createData("Noura", "Data Analyst", "2 March 2022", "Available"),
-    createData("Taif", "Front-End Dev", "2 March 2022", "Unavailable"),
-    createData("Rahaf", "Back-End Dev", "2 March 2022", "Available"),
-    createData("Lama", "Full Stack Dev", "2 March 2022", "Unavailable"),
-  ];
+// function createData(name, position, date, status) {  
+//     return { name, position, date, status };
+//   }
   
   
-  const makeStyle=(status)=>{
-    if(status === 'Available')
-    {
-      return {
-        background: 'rgb(145 254 159 / 47%)',
-        color: 'green',
-      }
-    }
-    else if(status === 'Unavailable')
-    {
-      return{
-        background: '#ffadad8f',
-        color: 'red',
-      }
-    }
-  }
+  
+  // const makeStyle=(status)=>{
+  //   if(status === 'Available')
+  //   {
+  //     return {
+  //       background: 'rgb(145 254 159 / 47%)',
+  //       color: 'green',
+  //     }
+  //   }
+  //   else if(status === 'Unavailable')
+  //   {
+  //     return{
+  //       background: '#ffadad8f',
+  //       color: 'red',
+  //     }
+  //   }
+  // }
 
   // const {user}=useAuth0();
   // console.assert(user.sub)

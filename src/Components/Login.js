@@ -38,7 +38,7 @@ export default function SimpleCard() {
       .then((respons) => {
         console.log(respons.data.msg);
         if (
-          respons.data.msg == "Your token is ready"
+          respons.data.msg === "Your token is ready"
         ) {
           localStorage.setItem("token",respons.data.token)
           redirect();

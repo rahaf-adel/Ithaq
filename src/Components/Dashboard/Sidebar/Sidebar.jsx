@@ -6,7 +6,7 @@ import {UilSignOutAlt} from '@iconscout/react-unicons';
 import { UilBars } from "@iconscout/react-unicons";
 import { motion } from "framer-motion";
 import './sidebar.css';
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
     const [selected, setSelected] = useState(0);
