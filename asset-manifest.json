@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Ithaq/static/css/main.4a4ec372.css",
+    "main.js": "/Ithaq/static/js/main.549cdd52.js",
+    "static/js/988.6fe71044.chunk.js": "/Ithaq/static/js/988.6fe71044.chunk.js",
+    "static/media/IthaqLogo.png": "/Ithaq/static/media/IthaqLogo.345d06475e855012a0c1.png",
+    "static/media/MOCITLogo.png": "/Ithaq/static/media/MOCITLogo.8a7c0d411a3cfda8ca6f.png",
+    "static/media/SAFCSPLogo.png": "/Ithaq/static/media/SAFCSPLogo.fd8e731a9f9adc883db0.png",
+    "static/media/SdaiaLogo.png": "/Ithaq/static/media/SdaiaLogo.086a2bf64886cbcacfef.png",
+    "static/media/STCLogo.png": "/Ithaq/static/media/STCLogo.e03171fadd0f8ad1f0ff.png",
+    "static/media/STC.png": "/Ithaq/static/media/STC.cffb7b030fb8d56de99d.png",
+    "static/media/logo.jpeg": "/Ithaq/static/media/logo.34ab7fd0a3c3f5cf6cb0.jpeg",
+    "index.html": "/Ithaq/index.html",
+    "main.4a4ec372.css.map": "/Ithaq/static/css/main.4a4ec372.css.map",
+    "main.549cdd52.js.map": "/Ithaq/static/js/main.549cdd52.js.map",
+    "988.6fe71044.chunk.js.map": "/Ithaq/static/js/988.6fe71044.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a4ec372.css",
+    "static/js/main.549cdd52.js"
+  ]
+}
